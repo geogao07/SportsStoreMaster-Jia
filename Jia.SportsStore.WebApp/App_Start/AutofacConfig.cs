@@ -19,12 +19,13 @@ namespace Jia.SportsStore.WebApp
         {
             var builder = new ContainerBuilder();
             builder.RegisterInstance<IProductsRepository>(new EFProductRepository());
-          
+            builder.RegisterInstance<IOrderProcessor>(new EmailOrderProcessor(new EmailSettings()));
+
 
             builder.RegisterControllers(AppDomain.CurrentDomain.GetAssemblies());
 
             var container = builder.Build();
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));//tell .net mvc to use which resolver
         }
     }
 }

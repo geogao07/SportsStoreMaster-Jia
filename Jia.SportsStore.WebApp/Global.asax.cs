@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
+using Jia.SportsStore.Domain.Entities;
+using Jia.SportsStore.WebApp.Infrastructure.Binders;
 
 namespace Jia.SportsStore.WebApp
 {
@@ -16,6 +18,8 @@ namespace Jia.SportsStore.WebApp
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             AutofacConfig.Register();
+
+            ModelBinders.Binders.Add(typeof(Cart), new CartModelBinder());
         }
     }
 }
