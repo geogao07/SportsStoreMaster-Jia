@@ -45,7 +45,7 @@ namespace Jia.SportsSpecialist.DebugConsole
 
             //    ctx.SaveChanges();
             //}
-            //some changes test
+            //Azure CICD test
         }
     }
 }
