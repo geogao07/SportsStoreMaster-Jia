@@ -79,13 +79,9 @@
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ShippingDetails.cs" />
     <Compile Include="Entities\Users.cs" />
-    <Compile Include="Migrations\201810132002442_Products.cs" />
-    <Compile Include="Migrations\201810132002442_Products.Designer.cs">
-      <DependentUpon>201810132002442_Products.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810132018568_user.cs" />
-    <Compile Include="Migrations\201810132018568_user.Designer.cs">
-      <DependentUpon>201810132018568_user.cs</DependentUpon>
+    <Compile Include="Migrations\201811102107258_Init.cs" />
+    <Compile Include="Migrations\201811102107258_Init.Designer.cs">
+      <DependentUpon>201811102107258_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Mock\MockProductsRepository.cs" />
@@ -96,11 +92,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810132002442_Products.resx">
-      <DependentUpon>201810132002442_Products.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810132018568_user.resx">
-      <DependentUpon>201810132018568_user.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201811102107258_Init.resx">
+      <DependentUpon>201811102107258_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
